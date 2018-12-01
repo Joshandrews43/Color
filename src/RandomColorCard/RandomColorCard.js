@@ -10,8 +10,7 @@ class RandomColorCard extends Component {
     }
 
     generateRandomHex() {
-        const hex = '#'+Math.floor(Math.random()*16777215).toString(16);
-        return hex;
+        return '#'+Math.floor(Math.random()*16777215).toString(16);
     }
 
     render() {
@@ -30,7 +29,11 @@ class RandomColorSet extends Component {
         console.log("generating new set")
 
         const key = this.props.id * 6;
-        const colorSet = [key, key+1, key+2, key+3, key+4, key+5].map((i) => {return <RandomColorCard key={i}/>})
+        let colorSet = [];
+        for (let i = key; i < key+6; i++) {
+            colorSet.push(<RandomColorCard key={i}/>);
+        }
+
         this.state = {
             set: colorSet,
             isHidden: false, //this doesnt do anything yet
