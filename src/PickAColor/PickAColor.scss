@@ -1,0 +1,23 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#color-block {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+    #hex-display {
+        color: white;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        font-size: 20px;
+    }
+}

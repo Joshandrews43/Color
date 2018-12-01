@@ -1,0 +1,28 @@
+.random-color-card {
+    width: 140px;
+
+    .random-color-card-color {
+        width: 125px;
+        height: 125px;
+        padding: 3px;
+        border: 4px solid rgb(220,217,208);
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .random-color-card-hex {
+        text-align: center;
+        color: #404040;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.random-color-set {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}

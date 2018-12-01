@@ -1,0 +1,25 @@
+#red-slider {
+  background: linear-gradient(90deg, black, red); }
+
+#green-slider {
+  background: linear-gradient(90deg, black, lime); }
+
+#blue-slider {
+  background: linear-gradient(90deg, black, blue); }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 50px; }
+
+label {
+  margin-left: 10px;
+  width: 75px; }
+
+.picker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px; }
+
+/*# sourceMappingURL=ColorSlider.css.map */
