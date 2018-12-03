@@ -3,9 +3,6 @@ import './ColorSlider.css';
 
 class ColorSlider extends Component {
 
-    updateRGB() {
-        console.log("test")
-    }
     render() {
         return (
             <div className="picker">

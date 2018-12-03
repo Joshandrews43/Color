@@ -38,6 +38,7 @@ class RandomColors extends Component {
                                  id={this.state.currentSet + 1}
                                  classNames="active"
                                  onClick={this.props.onClick}
+                                 setSize={this.getSetSize()}
                                  />
                 ]);
             this.setState({
@@ -57,6 +58,7 @@ class RandomColors extends Component {
                              id={this.state.currentSet - 1}
                              classNames="active"
                              onClick={this.props.onClick}
+                             setSize={this.getSetSize()}
                              />
                         ].concat(this.state.currentColors);
             this.setState({
@@ -69,6 +71,10 @@ class RandomColors extends Component {
         this.setState({
             currentSet: this.state.currentSet - 1,
         });
+    }
+
+    getSetSize() {
+        return 6;
     }
 
     render() {

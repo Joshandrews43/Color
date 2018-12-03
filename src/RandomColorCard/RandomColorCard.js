@@ -26,11 +26,10 @@ class RandomColorCard extends Component {
 class RandomColorSet extends Component {
     constructor(props) {
         super(props);
-        console.log("generating new set")
 
-        const key = this.props.id * 6;
+        const key = this.props.id * this.props.setSize;
         let colorSet = [];
-        for (let i = key; i < key+6; i++) {
+        for (let i = key; i < key + this.props.setSize; i++) {
             colorSet.push(<RandomColorCard onClick={this.props.onClick} key={i}/>);
         }
 

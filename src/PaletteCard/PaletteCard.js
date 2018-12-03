@@ -39,7 +39,7 @@ class PaletteCard extends Component {
     render() {
         return (
             <div className="flex-column palette-card">
-                <ColorPalette onClick={this.props.onClick} colors={this.state.colors}/>
+                <ColorPalette onClick={this.props.onClick} colors={this.state.colors} />
                 <div className="palette-buttons">Bottom section</div>
             </div>
         );
