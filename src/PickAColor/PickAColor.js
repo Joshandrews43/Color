@@ -43,26 +43,28 @@ class PickAColor extends Component {
     render() {
         return (
             <div className="top flex-row">
-                <div className="sliders">
-                    <ColorSlider
-                        color={"red"}
-                        value={this.state.red}
-                        onInput={this.updateRed}/>
-                    <ColorSlider
-                        color={"green"}
-                        value={this.state.green}
-                        onInput={this.updateGreen}/>
-                    <ColorSlider
-                        color={"blue"}
-                        value={this.state.blue}
-                        onInput={this.updateBlue}/>
-                </div>
-                <div id="color-block" style={{backgroundColor: "#" + this.getHex()}}>
-                    <div id="hex-display">
-                        {"#" + this.getHex()}
+                <div className="left flex-row">
+                    <div className="sliders flex-column">
+                        <ColorSlider
+                            color={"red"}
+                            value={this.state.red}
+                            onInput={this.updateRed}/>
+                        <ColorSlider
+                            color={"green"}
+                            value={this.state.green}
+                            onInput={this.updateGreen}/>
+                        <ColorSlider
+                            color={"blue"}
+                            value={this.state.blue}
+                            onInput={this.updateBlue}/>
+                    </div>
+                    <div id="color-block" style={{backgroundColor: "#" + this.getHex()}} onClick={this.props.onClick}>
+                        <div id="hex-display" style={{backgroundColor: "#" + this.getHex()}}>
+                            {"#" + this.getHex()}
+                        </div>
                     </div>
                 </div>
-                //<PaletteCard />
+                <PaletteCard id="my-pallete" colors={this.props.myColors}/>
             </div>
         );
     }

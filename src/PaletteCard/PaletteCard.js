@@ -15,8 +15,7 @@ class PaletteCard extends Component {
 
     initializeColors(props) {
         let colors = [];
-
-        if(props.hasOwnProperty('colors')) {
+        if(props.hasOwnProperty('colors') && props.colors.length > 0) {
             return props.colors;
         }
 
@@ -26,10 +25,21 @@ class PaletteCard extends Component {
         return colors;
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (typeof nextProps.colors[3] == 'undefined') {
+            for(let i = 0; i < 4; i++) {
+                if(typeof nextProps.colors[i] == 'undefined') {
+                    nextProps.colors[i] = "#FFFFFF";
+                }
+            }
+        }
+        this.setState({colors: nextProps.colors});
+    }
+
     render() {
         return (
             <div className="flex-column palette-card">
-                <ColorPalette colors={this.state.colors}/>
+                <ColorPalette onClick={this.props.onClick} colors={this.state.colors}/>
                 <div className="palette-buttons">Bottom section</div>
             </div>
         );

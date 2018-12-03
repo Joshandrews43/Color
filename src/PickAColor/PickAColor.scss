@@ -1,6 +1,14 @@
-.flex-row {
+.top {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    margin-top: 30px;
+}
+
+.sliders {
+    justify-content: center;
 }
 
 #color-block {

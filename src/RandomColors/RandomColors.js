@@ -37,6 +37,7 @@ class RandomColors extends Component {
                 [<RandomColorSet key={this.state.currentSet + 1}
                                  id={this.state.currentSet + 1}
                                  classNames="active"
+                                 onClick={this.props.onClick}
                                  />
                 ]);
             this.setState({
@@ -55,6 +56,7 @@ class RandomColors extends Component {
             const newArray = [<RandomColorSet key={this.state.currentSet - 1}
                              id={this.state.currentSet - 1}
                              classNames="active"
+                             onClick={this.props.onClick}
                              />
                         ].concat(this.state.currentColors);
             this.setState({

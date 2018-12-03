@@ -16,7 +16,7 @@ class RandomPalettes extends Component {
     }
 
     generateRandomHex() {
-        return '#'+Math.floor(Math.random()*16777215).toString(16);
+        return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
     }
 
     generateRandomPalettes() {
@@ -26,7 +26,7 @@ class RandomPalettes extends Component {
             for (let j = 0; j < 4; j++) {
                 paletteColors.push(this.generateRandomHex());
             }
-            newPalettes.push(<PaletteCard colors={paletteColors} />);
+            newPalettes.push(<PaletteCard onClick={this.props.onClick} colors={paletteColors} />);
         }
         newPalettes = this.state.palettes.concat(newPalettes);
         this.setState({palettes: newPalettes})

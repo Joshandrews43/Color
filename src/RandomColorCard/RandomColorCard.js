@@ -10,13 +10,13 @@ class RandomColorCard extends Component {
     }
 
     generateRandomHex() {
-        return '#'+Math.floor(Math.random()*16777215).toString(16);
+        return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
     }
 
     render() {
         return (
             <div className="random-color-card flex-column">
-                <div className="random-color-card-color" style={{backgroundColor: this.state.hex}}></div>
+                <div className="random-color-card-color" style={{backgroundColor: this.state.hex}}  onClick={this.props.onClick} ></div>
                 <div className="random-color-card-hex">{this.state.hex}</div>
             </div>
         );
@@ -31,7 +31,7 @@ class RandomColorSet extends Component {
         const key = this.props.id * 6;
         let colorSet = [];
         for (let i = key; i < key+6; i++) {
-            colorSet.push(<RandomColorCard key={i}/>);
+            colorSet.push(<RandomColorCard onClick={this.props.onClick} key={i}/>);
         }
 
         this.state = {

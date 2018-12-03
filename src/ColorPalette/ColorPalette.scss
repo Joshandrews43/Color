@@ -11,6 +11,12 @@
         display: none;
         font-family: 'Open Sans', sans-serif;
         margin: 0;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        text-align: center;
+        font-size: 22px;
+        cursor: pointer;
+        width: 90%;
     }
 
     &:hover {
