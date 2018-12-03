@@ -23,17 +23,27 @@ class RandomPalettes extends Component {
     };
 
     generateRandomHex() {
-        return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+        return "#000000".replace(/0/g,() => (~~(Math.random()*16)).toString(16));
+    }
+
+    makePalette(num) {
+        const paletteColors = [];
+        for (let j = 0; j < 4; j++) {
+            paletteColors.push(this.generateRandomHex());
+        }
+        return (
+            <PaletteCard
+                onClick={this.props.onClick}
+                colors={paletteColors}
+                key={this.state.palettes.length + num}
+            />
+        );
     }
 
     generateRandomPalettes() {
         let newPalettes = [];
         for (let i = 0; i < 8; i++) {
-            const paletteColors = [];
-            for (let j = 0; j < 4; j++) {
-                paletteColors.push(this.generateRandomHex());
-            }
-            newPalettes.push(<PaletteCard onClick={this.props.onClick} colors={paletteColors} key={this.state.palettes.length + i}/>);
+            newPalettes.push(this.makePalette(i));
         }
         newPalettes = this.state.palettes.concat(newPalettes);
         this.setState({palettes: newPalettes})

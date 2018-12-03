@@ -14,9 +14,9 @@ class ColorSlider extends Component {
                     step="1"
                     defaultValue="0"
                     onInput={this.props.onInput}
-                    />
+                />
 
-                    <label className="color-name">{this.props.color + ": " + this.props.value}</label>
+                <label className="color-name">{this.props.color + ": " + this.props.value}</label>
             </div>
         );
     }
