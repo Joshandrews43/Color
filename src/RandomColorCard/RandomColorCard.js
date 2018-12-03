@@ -36,7 +36,6 @@ class RandomColorSet extends Component {
 
         this.state = {
             set: colorSet,
-            isHidden: false, //this doesnt do anything yet
         };
     }
 

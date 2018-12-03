@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACV,MAAM,EAAE,gBAAgB;EACxB,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,iBAAiB;EACzB,UAAU,EAAE,gCAA8B;EAC1C,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;;AAGjB,gBAAiB;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI",
+"sources": ["PaletteCard.scss"],
+"names": [],
+"file": "PaletteCard.css"
+}

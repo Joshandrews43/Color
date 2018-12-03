@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PickAColor from './PickAColor/PickAColor.js'
 import RandomColors from './RandomColors/RandomColors.js'
+import RandomPalettes from './RandomPalettes/RandomPalettes.js'
 
 class Site extends Component {
     render() {
@@ -8,6 +9,7 @@ class Site extends Component {
             <>
                 <PickAColor/>
                 <RandomColors />
+                <RandomPalettes />
             </>
 
             //<top part with color sliders, choose your own color>

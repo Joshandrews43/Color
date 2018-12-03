@@ -2,12 +2,21 @@
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    padding-bottom: 30px;
+    border-bottom: 4px solid black;
+
 }
 
 #random-colors {
     width: 80%;
+    flex-wrap: wrap;
 }
 
+.header {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px 0 30px 0;
+}
 
 .arrow {
     width: 50px;

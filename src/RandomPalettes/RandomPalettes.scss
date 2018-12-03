@@ -1,0 +1,10 @@
+#random-palettes-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    #random-palettes {
+        flex-wrap: wrap;
+        width: 975px;
+    }
+}

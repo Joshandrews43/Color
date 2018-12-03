@@ -72,7 +72,7 @@ class RandomColors extends Component {
     render() {
         return (
             <>
-                <div className="header">Random Colors</div>
+                <h3 className="header">Random Colors</h3>
                 <div className="random-colors-container flex-row">
                     <img src={leftArrow} alt="left arrow" className="arrow clickable"
                         onClick={this.onPreviousSet.bind(this)}

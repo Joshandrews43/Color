@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ColorSlider from '../ColorSlider/ColorSlider.js'
+import ColorSlider from '../ColorSlider/ColorSlider.js';
 import './PickAColor.css';
+import PaletteCard from '../PaletteCard/PaletteCard.js';
 
 class PickAColor extends Component {
 
@@ -61,6 +62,7 @@ class PickAColor extends Component {
                         {"#" + this.getHex()}
                     </div>
                 </div>
+                //<PaletteCard />
             </div>
         );
     }
