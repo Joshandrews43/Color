@@ -10,13 +10,16 @@ class RandomColorCard extends Component {
     }
 
     generateRandomHex() {
-        return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+        return "#000000".replace(/0/g, () => (~~(Math.random()*16)).toString(16));
     }
 
     render() {
         return (
             <div className="random-color-card flex-column">
-                <div className="random-color-card-color" style={{backgroundColor: this.state.hex}}  onClick={this.props.onClick} ></div>
+                <div className="random-color-card-color"
+                     style={{backgroundColor: this.state.hex}}
+                     onClick={this.props.onClick}>     
+                </div>
                 <div className="random-color-card-hex">{this.state.hex}</div>
             </div>
         );

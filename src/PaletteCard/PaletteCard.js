@@ -14,23 +14,19 @@ class PaletteCard extends Component {
     }
 
     initializeColors(props) {
-        let colors = [];
         if(props.hasOwnProperty('colors') && props.colors.length > 0) {
             return props.colors;
         }
 
-        for (let i = 0; i < 4; i++) {
-            colors.push('#FFFFFF');
-        }
-        return colors;
+        return Array(4).fill("#FFFFFF");
+        // Could also make it super short?
+        // return props.colors || Array(4).fill("#FFFFFF");
     }
 
     componentWillReceiveProps(nextProps) {
-        if (typeof nextProps.colors[3] == 'undefined') {
-            for(let i = 0; i < 4; i++) {
-                if(typeof nextProps.colors[i] == 'undefined') {
-                    nextProps.colors[i] = "#FFFFFF";
-                }
+        for (let i = 0; i < 4; i++) {
+            if (typeof nextProps.colors[i] == 'undefined') {
+                nextProps.colors[i] = "#FFFFFF";
             }
         }
         this.setState({colors: nextProps.colors});
@@ -39,7 +35,9 @@ class PaletteCard extends Component {
     render() {
         return (
             <div className="flex-column palette-card">
-                <ColorPalette onClick={this.props.onClick} colors={this.state.colors} />
+                <ColorPalette onClick={this.props.onClick}
+                              colors={this.state.colors}
+                />
                 <div className="palette-buttons">Bottom section</div>
             </div>
         );
